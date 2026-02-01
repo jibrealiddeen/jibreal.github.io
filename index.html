@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jibreal Id-deen | Cybersecurity & Networking Student Portfolio</title>
-  <meta name="description" content="Student portfolio for cybersecurity and networking. Labs, academic projects, and hands-on work from RIT/NTID." />
+  <meta name="description" content="Cybersecurity and Networking student portfolio. Academic labs, projects, and featured media from RIT/NTID." />
 
   <style>
     :root{
@@ -41,6 +41,7 @@
       padding: 28px 0 60px;
     }
 
+    /* Top nav */
     .nav{
       display:flex;
       align-items:center;
@@ -89,6 +90,7 @@
       background: rgba(15,27,52,.6);
     }
 
+    /* Hero */
     .hero{
       margin-top: 18px;
       padding: 28px;
@@ -148,6 +150,7 @@
     }
     .btn:hover{ text-decoration:none; filter: brightness(1.05); }
 
+    /* Sections */
     section{
       margin-top: 18px;
       padding: 22px;
@@ -197,12 +200,20 @@
       color: var(--muted);
     }
 
+    /* Project cards */
     .project{
       grid-column: span 6;
       padding: 16px;
       border-radius: 14px;
       border: 1px solid var(--border);
       background: rgba(15,27,52,.55);
+    }
+    .project h3{ margin: 0 0 6px; font-size: 16px; }
+    .project p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
     }
     .project .meta{
       display:flex;
@@ -239,6 +250,7 @@
       padding: 16px 0 0;
     }
 
+    /* Responsive */
     @media (max-width: 820px){
       .card, .project{ grid-column: span 12; }
       .links{ display:none; }
@@ -256,6 +268,7 @@
       <div class="links">
         <a href="#skills">Skills</a>
         <a href="#academic">Academic Projects</a>
+        <a href="#featured">Featured Media</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
@@ -266,15 +279,16 @@
       <h1>Jibreal Id-deen<br/>Cybersecurity & Networking</h1>
 
       <p class="sub">
-        I am a student at RIT/NTID in Applied Computer Technology (Information & Computing Studies).
-        I focus on networking, system administration, and cybersecurity basics.
-        I build academic labs and projects to practice real skills like DNS, DHCP, VLANs, virtualization, Linux, and security hardening.
+        I am a Deaf student at RIT/NTID in Applied Computer Technology (Information & Computing Studies).
+        I build academic labs to practice real skills in networking, system administration, and cybersecurity basics.
+        I like clean documentation with steps, screenshots, and testing.
       </p>
 
       <div class="cta">
         <a class="btn primary" href="#academic">View Academic Projects</a>
+        <a class="btn" href="#featured">Featured Media</a>
         <a class="btn" href="#contact">Contact</a>
-        <!-- Optional: upload a resume PDF to your repo and link it here -->
+        <!-- Optional: upload resume.pdf to your repo root and enable this -->
         <!-- <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a> -->
       </div>
     </header>
@@ -304,7 +318,7 @@
 
         <div class="card">
           <h3>Security Basics</h3>
-          <p>Hardening, access control, patching, basic firewall rules, and safe lab practice.</p>
+          <p>Hardening, access control, patching, firewall basics, and safe lab practice.</p>
           <div class="chips">
             <span class="chip">Least privilege</span>
             <span class="chip">Logging</span>
@@ -314,7 +328,7 @@
 
         <div class="card">
           <h3>Documentation</h3>
-          <p>I write clear lab reports with steps, screenshots, and verification tests.</p>
+          <p>I write lab reports with clear steps, screenshots, and verification tests.</p>
           <div class="chips">
             <span class="chip">Lab write-ups</span>
             <span class="chip">Testing</span>
@@ -329,26 +343,25 @@
       <div class="grid">
 
         <div class="project">
-          <h3>Lab: Setting Up a SOHO Network</h3>
+          <h3>Lab 3: Setting Up a SOHO Network</h3>
           <p>
-            Built a SOHO LAN with a router and Windows Server 2019.
-            Configured DNS and DHCP, deployed IIS on lab PCs, and verified website access.
-            Tested A and PTR DNS lookups from a wired laptop.
+            Set up a SOHO LAN with a router and a Windows Server 2019 service.
+            Configured DNS and DHCP on a lab subnet (192.168.2XX.0/24) and deployed IIS on lab PCs.
+            Verified website access and A/PTR DNS lookups from a wired laptop.
           </p>
           <div class="meta">
             <span class="pill">Windows Server 2019</span>
             <span class="pill">DNS/DHCP</span>
             <span class="pill">IIS</span>
           </div>
-          <!-- Put the lab file in your repo (example: /labs/...) then update the link -->
           <a href="labs/IddeenJ_lab-3_Setting_Up_A_SOHO_Network.pdf" target="_blank" rel="noopener">Open lab report →</a>
         </div>
 
         <div class="project">
-          <h3>Lab: Proxmox Server</h3>
+          <h3>Lab 4: Proxmox Server</h3>
           <p>
-            Built a Proxmox-based lab network and deployed three VMs.
-            Joined a Windows VM to a domain and verified DNS, Active Directory, and IIS worked end-to-end.
+            Built a Proxmox-based lab network and deployed three virtual machines.
+            Joined a Windows VM to a domain in the lab and verified end-to-end DNS, AD, and IIS worked correctly.
           </p>
           <div class="meta">
             <span class="pill">Proxmox</span>
@@ -359,7 +372,7 @@
         </div>
 
         <div class="project">
-          <h3>Lab: Pi-hole Network Deployment</h3>
+          <h3>Lab 5: Pi-hole Network Deployment</h3>
           <p>
             Set up a Raspberry Pi 3 B+ as a DNS sinkhole using Pi-hole.
             Used it to block ads and trackers and support local name resolution in the lab network.
@@ -373,11 +386,11 @@
         </div>
 
         <div class="project">
-          <h3>Lab: Private AI Model with Ollama + OpenWebUI</h3>
+          <h3>Lab 6: Private AI on LAN (Ollama + OpenWebUI)</h3>
           <p>
-            Deployed a private AI chat stack on a LAN server using Ubuntu + Ollama + OpenWebUI.
-            Secured it with a static IP, firewall, and authentication.
-            Pulled multiple models and tested responses to confirm everything worked.
+            Set up a private AI chat stack on a LAN server using Ubuntu Server, Ollama, and OpenWebUI.
+            Secured it with a static IP, firewall rules, and authentication.
+            Verified it worked by pulling multiple models and comparing their responses.
           </p>
           <div class="meta">
             <span class="pill">Ubuntu Server</span>
@@ -390,14 +403,58 @@
       </div>
 
       <p class="note">
-        Safety note: I do not publish passwords, keys, or private sensitive network info. This portfolio is for learning and professional practice.
+        Safety note: I do not publish passwords, keys, or sensitive private network details. This site is for learning and professional growth.
+      </p>
+    </section>
+
+    <section id="featured">
+      <h2>Featured Media</h2>
+      <div class="grid">
+
+        <div class="project">
+          <h3>Scratch Team Blog: ASL Tutorial (Deaf Kids Code)</h3>
+          <p>
+            Featured in a Scratch Team Blog article about an American Sign Language tutorial in Scratch.
+            This project helps Deaf and hard of hearing learners access creative coding in ASL.
+          </p>
+          <div class="meta">
+            <span class="pill">ASL</span>
+            <span class="pill">Scratch</span>
+            <span class="pill">Deaf Kids Code</span>
+          </div>
+          <a href="https://medium.com/scratchteam-blog/new-asl-tutorial-expands-creative-pathways-for-hearing-impaired-scratchers-ba6258dff1d9" target="_blank" rel="noopener">
+            Read the article →
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Made by Google: Live Transcribe on Pixel</h3>
+          <p>
+            Featured in a video about Live Transcribe on Pixel. Live Transcribe turns speech into instant captions,
+            which helps Deaf people join everyday conversations (family dinner, ordering coffee, and more).
+            Google partnered with Gallaudet University and supported Deaf students and families through Deaf Kids Code.
+          </p>
+          <div class="meta">
+            <span class="pill">Accessibility</span>
+            <span class="pill">Live Transcribe</span>
+            <span class="pill">Pixel</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=DEaw9IZjuqo" target="_blank" rel="noopener">
+            Watch the video →
+          </a>
+        </div>
+
+      </div>
+
+      <p class="note">
+        I like projects that support accessibility and help Deaf students learn tech and computer science.
       </p>
     </section>
 
     <section id="about">
       <h2>About</h2>
       <p class="sub">
-        I am a Deaf student at RIT/NTID. I enjoy hands-on labs and building real systems.
+        I am a Deaf student at RIT/NTID. I enjoy hands-on labs, building networks, and learning how to secure systems.
         My goal is to grow in cybersecurity and networking through projects, documentation, and internships.
       </p>
     </section>
@@ -411,7 +468,7 @@
         LinkedIn:
         <a href="https://www.linkedin.com/in/jibreal-id-deen/" target="_blank" rel="noopener">linkedin.com/in/jibreal-id-deen</a>
         <br/>
-        <!-- Optional: add your GitHub profile link -->
+        <!-- Optional: add your GitHub profile -->
         <!-- GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">github.com/YOURUSERNAME</a> -->
       </p>
     </section>
