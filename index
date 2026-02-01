@@ -1,1 +1,37 @@
 index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jibreal | Cybersecurity Portfolio</title>
+</head>
+<body>
+
+  <h1>Hi, I'm Jibreal (Cold)</h1>
+
+  <p>
+    I am a cybersecurity and networking student.
+    This website shows my projects and labs.
+  </p>
+
+  <h2>Skills</h2>
+  <ul>
+    <li>Networking (VLAN, DNS, TCP/IP)</li>
+    <li>Windows Server & Linux</li>
+    <li>Virtual Machines (Proxmox, VMware)</li>
+    <li>Basic Security Labs</li>
+  </ul>
+
+  <h2>Projects</h2>
+  <p>
+    Home Network Lab – built VLANs, DNS, and virtual machines.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Email: yourname@email.com
+  </p>
+
+</body>
+</html>
+
