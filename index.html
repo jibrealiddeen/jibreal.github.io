@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Jibreal Id-deen | Student Portfolio</title>
-  <meta name="description" content="Cybersecurity and Networking portfolio website." />
+  <title>Jibreal Id-deen | Cybersecurity & Networking Student Portfolio</title>
+  <meta name="description" content="Student portfolio for cybersecurity and networking. Labs, academic projects, and hands-on work from RIT/NTID." />
 
   <style>
     :root{
       --bg1:#070B14;
       --bg2:#0A1633;
-      --card:#0f1b34cc;
       --border:#233a66;
       --text:#EAF0FF;
       --muted:#B9C7E6;
@@ -42,7 +41,6 @@
       padding: 28px 0 60px;
     }
 
-    /* Top nav */
     .nav{
       display:flex;
       align-items:center;
@@ -91,7 +89,6 @@
       background: rgba(15,27,52,.6);
     }
 
-    /* Hero */
     .hero{
       margin-top: 18px;
       padding: 28px;
@@ -122,8 +119,8 @@
       margin: 0;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.6;
-      max-width: 70ch;
+      line-height: 1.7;
+      max-width: 78ch;
     }
     .cta{
       margin-top: 18px;
@@ -151,7 +148,6 @@
     }
     .btn:hover{ text-decoration:none; filter: brightness(1.05); }
 
-    /* Sections */
     section{
       margin-top: 18px;
       padding: 22px;
@@ -178,10 +174,7 @@
       border: 1px solid var(--border);
       background: rgba(15,27,52,.55);
     }
-    .card h3{
-      margin: 0 0 6px;
-      font-size: 16px;
-    }
+    .card h3{ margin: 0 0 6px; font-size: 16px; }
     .card p{
       margin: 0;
       color: var(--muted);
@@ -204,7 +197,6 @@
       color: var(--muted);
     }
 
-    /* Projects */
     .project{
       grid-column: span 6;
       padding: 16px;
@@ -232,7 +224,13 @@
       font-weight: 600;
     }
 
-    /* Footer */
+    .note{
+      margin: 14px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
     footer{
       margin-top: 18px;
       color: var(--muted);
@@ -241,7 +239,6 @@
       padding: 16px 0 0;
     }
 
-    /* Responsive */
     @media (max-width: 820px){
       .card, .project{ grid-column: span 12; }
       .links{ display:none; }
@@ -258,24 +255,26 @@
       </div>
       <div class="links">
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#academic">Academic Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
 
     <header class="hero">
-      <span class="tag">Student Portfolio</span>
-      <h1>Your Name<br/>Student Portfolio</h1>
+      <span class="tag">RIT/NTID • Applied Computer Technology • Student Portfolio</span>
+      <h1>Jibreal Id-deen<br/>Cybersecurity & Networking</h1>
+
       <p class="sub">
-        I am third-year student majoring in Applied Computing Technoology at RIT/NTID. Which the department that I am in Information Computing Studies I build academic labs and projects to practice
-        realw world skills include Proxmox Server, Linux, Fundamentals of System Administration, Python, PowerShell, Networking, more...
+        I am a student at RIT/NTID in Applied Computer Technology (Information & Computing Studies).
+        I focus on networking, system administration, and cybersecurity basics.
+        I build academic labs and projects to practice real skills like DNS, DHCP, VLANs, virtualization, Linux, and security hardening.
       </p>
 
       <div class="cta">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn" href="#contact">Contact Me</a>
-        <!-- Optional: add your resume file in the repo, then link it -->
+        <a class="btn primary" href="#academic">View Academic Projects</a>
+        <a class="btn" href="#contact">Contact</a>
+        <!-- Optional: upload a resume PDF to your repo and link it here -->
         <!-- <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a> -->
       </div>
     </header>
@@ -285,125 +284,135 @@
       <div class="grid">
         <div class="card">
           <h3>Networking</h3>
-          <p>TCP/IP, subnetting, VLANs, DNS, DHCP, NAT, basic routing, troubleshooting.</p>
+          <p>TCP/IP, subnetting, VLANs, DNS, DHCP, NAT, basic routing, and troubleshooting.</p>
           <div class="chips">
             <span class="chip">Wireshark</span>
-            <span class="chip">Network diagrams</span>
             <span class="chip">IP planning</span>
+            <span class="chip">Network diagrams</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>Systems</h3>
-          <p>Windows Server, Active Directory basics, Linux basics, virtualization and VMs.</p>
+          <h3>Systems & Virtualization</h3>
+          <p>Windows Server basics, Linux basics, VMs, and lab environments (Proxmox / VMware).</p>
           <div class="chips">
             <span class="chip">Windows Server</span>
             <span class="chip">Linux</span>
-            <span class="chip">Proxmox / VMware</span>
+            <span class="chip">Proxmox</span>
           </div>
         </div>
 
         <div class="card">
           <h3>Security Basics</h3>
-          <p>Account security, access control, logging, patching, and safe lab practice.</p>
+          <p>Hardening, access control, patching, basic firewall rules, and safe lab practice.</p>
           <div class="chips">
-            <span class="chip">Hardening</span>
             <span class="chip">Least privilege</span>
-            <span class="chip">Incident notes</span>
+            <span class="chip">Logging</span>
+            <span class="chip">Firewall basics</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>Soft Skills</h3>
-          <p>Documentation, teamwork, learning mindset, clear communication and planning.</p>
+          <h3>Documentation</h3>
+          <p>I write clear lab reports with steps, screenshots, and verification tests.</p>
           <div class="chips">
-            <span class="chip">Documentation</span>
-            <span class="chip">Problem solving</span>
-            <span class="chip">Collaboration</span>
+            <span class="chip">Lab write-ups</span>
+            <span class="chip">Testing</span>
+            <span class="chip">Clear notes</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="academic">
+      <h2>Academic Projects</h2>
       <div class="grid">
 
         <div class="project">
-          <h3>Home Network Lab</h3>
+          <h3>Lab: Setting Up a SOHO Network</h3>
           <p>
-            Built a small lab network. Planned IP ranges and tested DNS and NAT.
-            Practiced troubleshooting with Wireshark.
+            Built a SOHO LAN with a router and Windows Server 2019.
+            Configured DNS and DHCP, deployed IIS on lab PCs, and verified website access.
+            Tested A and PTR DNS lookups from a wired laptop.
           </p>
           <div class="meta">
-            <span class="pill">VLAN</span>
+            <span class="pill">Windows Server 2019</span>
+            <span class="pill">DNS/DHCP</span>
+            <span class="pill">IIS</span>
+          </div>
+          <!-- Put the lab file in your repo (example: /labs/...) then update the link -->
+          <a href="labs/IddeenJ_lab-3_Setting_Up_A_SOHO_Network.docx" target="_blank" rel="noopener">Open lab report →</a>
+        </div>
+
+        <div class="project">
+          <h3>Lab: Proxmox Server</h3>
+          <p>
+            Built a Proxmox-based lab network and deployed three VMs.
+            Joined a Windows VM to a domain and verified DNS, Active Directory, and IIS worked end-to-end.
+          </p>
+          <div class="meta">
+            <span class="pill">Proxmox</span>
+            <span class="pill">VMs</span>
+            <span class="pill">Domain join</span>
+          </div>
+          <a href="labs/IddeenJ_lab-4_Proxmox_Server.docx" target="_blank" rel="noopener">Open lab report →</a>
+        </div>
+
+        <div class="project">
+          <h3>Lab: Pi-hole Network Deployment</h3>
+          <p>
+            Set up a Raspberry Pi 3 B+ as a DNS sinkhole using Pi-hole.
+            Used it to block ads and trackers and support local name resolution in the lab network.
+          </p>
+          <div class="meta">
+            <span class="pill">Raspberry Pi</span>
+            <span class="pill">Pi-hole</span>
             <span class="pill">DNS</span>
-            <span class="pill">NAT</span>
           </div>
-          <!-- Replace # with your repo link later -->
-          <a href="#" target="_blank" rel="noopener">View notes or repo →</a>
+          <a href="labs/IddeenJ_lab-5_Pi-Hole_Network_deployment.docx" target="_blank" rel="noopener">Open lab report →</a>
         </div>
 
         <div class="project">
-          <h3>Windows Server Practice</h3>
+          <h3>Lab: Private AI Model with Ollama + OpenWebUI</h3>
           <p>
-            Created VMs and practiced Windows Server basics like users, groups,
-            and simple access control rules.
+            Deployed a private AI chat stack on a LAN server using Ubuntu + Ollama + OpenWebUI.
+            Secured it with a static IP, firewall, and authentication.
+            Pulled multiple models and tested responses to confirm everything worked.
           </p>
           <div class="meta">
-            <span class="pill">Windows Server</span>
-            <span class="pill">AD basics</span>
-            <span class="pill">Permissions</span>
+            <span class="pill">Ubuntu Server</span>
+            <span class="pill">Ollama</span>
+            <span class="pill">OpenWebUI</span>
           </div>
-          <a href="#" target="_blank" rel="noopener">View notes or repo →</a>
-        </div>
-
-        <div class="project">
-          <h3>Linux Basics Lab</h3>
-          <p>
-            Practiced Linux commands, file permissions, and basic networking tools.
-            Wrote simple documentation for what I learned.
-          </p>
-          <div class="meta">
-            <span class="pill">Linux</span>
-            <span class="pill">Permissions</span>
-            <span class="pill">Networking tools</span>
-          </div>
-          <a href="#" target="_blank" rel="noopener">View notes or repo →</a>
-        </div>
-
-        <div class="project">
-          <h3>Packet Capture Mini Report</h3>
-          <p>
-            Captured traffic in a safe lab, then explained what happened in simple steps.
-            Focused on learning and documentation.
-          </p>
-          <div class="meta">
-            <span class="pill">Wireshark</span>
-            <span class="pill">TCP/IP</span>
-            <span class="pill">Analysis</span>
-          </div>
-          <a href="#" target="_blank" rel="noopener">View notes or repo →</a>
+          <a href="labs/IddeenJ_lab-6_Deploying_a_Private_AI_Model_with_Ollama_and_OpenWebUI.docx" target="_blank" rel="noopener">Open lab report →</a>
         </div>
 
       </div>
+
+      <p class="note">
+        Safety note: I do not publish passwords, keys, or private sensitive network info. This portfolio is for learning and professional practice.
+      </p>
     </section>
 
     <section id="about">
       <h2>About</h2>
-      <p style="color: var(--muted); margin:0; line-height: 1.7;">
-        Write a short paragraph about you here. Example:
-        I am a student focused on cybersecurity and networking. I enjoy hands on labs,
-        building small networks, and learning how to secure systems. I like to document my work
-        so other people can understand it.
+      <p class="sub">
+        I am a Deaf student at RIT/NTID. I enjoy hands-on labs and building real systems.
+        My goal is to grow in cybersecurity and networking through projects, documentation, and internships.
       </p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p style="color: var(--muted); margin:0; line-height: 1.7;">
-        Email: <a href="mailto:youremail@example.com">jibrealiddeen6@gmail.com.com</a><br/>
-        LinkedIn: <a href="#" target="_blank" rel="noopener">https://www.linkedin.com/in/jibreal-id-deen/</a><br/>
+      <p class="sub">
+        Email:
+        <a href="mailto:jibrealiddeen6@gmail.com">jibrealiddeen6@gmail.com</a>
+        <br/>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/jibreal-id-deen/" target="_blank" rel="noopener">linkedin.com/in/jibreal-id-deen</a>
+        <br/>
+        <!-- Optional: add your GitHub profile link -->
+        <!-- GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">github.com/YOURUSERNAME</a> -->
       </p>
     </section>
 
@@ -413,12 +422,7 @@
   </div>
 
   <script>
-    // Sets current year in footer (safe, simple)
-    document.getElementById("2026").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-</body>
-</html>
-
