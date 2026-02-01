@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
- <title>Jibreal Id-deen | Networking & Systems Student Portfolio</title>
-  <meta name="description" content="Cybersecurity and Networking student portfolio. Academic labs, projects, and featured media from RIT/NTID." />
+  <title>Jibreal Id-deen | Networking, Systems & Network Security</title>
+  <meta name="description" content="Student portfolio for networking, system administration, and network security. Academic labs, projects, and featured media from RIT/NTID." />
 
   <style>
     :root{
@@ -41,7 +41,6 @@
       padding: 28px 0 60px;
     }
 
-    /* Top nav */
     .nav{
       display:flex;
       align-items:center;
@@ -63,6 +62,7 @@
       gap:10px;
       font-weight:700;
       letter-spacing:.4px;
+      color: var(--text);
     }
     .dot{
       width:10px; height:10px;
@@ -90,7 +90,6 @@
       background: rgba(15,27,52,.6);
     }
 
-    /* Hero */
     .hero{
       margin-top: 18px;
       padding: 28px;
@@ -150,7 +149,6 @@
     }
     .btn:hover{ text-decoration:none; filter: brightness(1.05); }
 
-    /* Sections */
     section{
       margin-top: 18px;
       padding: 22px;
@@ -170,15 +168,15 @@
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
     }
-    .card{
+    .card, .project{
       grid-column: span 6;
       padding: 16px;
       border-radius: 14px;
       border: 1px solid var(--border);
       background: rgba(15,27,52,.55);
     }
-    .card h3{ margin: 0 0 6px; font-size: 16px; }
-    .card p{
+    .card h3, .project h3{ margin: 0 0 6px; font-size: 16px; }
+    .card p, .project p{
       margin: 0;
       color: var(--muted);
       line-height: 1.6;
@@ -200,22 +198,7 @@
       color: var(--muted);
     }
 
-    /* Project cards */
-    .project{
-      grid-column: span 6;
-      padding: 16px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(15,27,52,.55);
-    }
-    .project h3{ margin: 0 0 6px; font-size: 16px; }
-    .project p{
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 14px;
-    }
-    .project .meta{
+    .meta{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
@@ -250,7 +233,6 @@
       padding: 16px 0 0;
     }
 
-    /* Responsive */
     @media (max-width: 820px){
       .card, .project{ grid-column: span 12; }
       .links{ display:none; }
@@ -268,30 +250,28 @@
       <div class="links">
         <a href="#skills">Skills</a>
         <a href="#academic">Academic Projects</a>
+        <a href="#security">Security Labs</a>
         <a href="#featured">Featured Media</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
 
     <header class="hero">
-     <span class="tag">RIT/NTID • Applied Computer Technology • Networking & Systems</span>
-      <h1>Jibreal Id-deen<br/>Networking & System Administration</h1>
-      
-<p class="sub">
-  I am a Deaf, third-year student at RIT/NTID in Applied Computer Technology (Information & Computing Studies).
-  My focus is networking and system administration. I build academic labs to practice real skills like DNS, DHCP,
-  VLANs, Windows Server, Linux, virtualization, and troubleshooting. I also like writing clear lab reports with
-  steps, screenshots, and testing.
-</p>
+      <span class="tag">RIT/NTID • Applied Computer Technology • Networking & Systems</span>
+      <h1>Jibreal Id-deen<br/>Networking, Systems & Network Security</h1>
 
-
+      <p class="sub">
+        I am a Deaf, third-year student at RIT/NTID in Applied Computer Technology (Information & Computing Studies).
+        My focus is networking, system administration, and network security basics. I build labs to practice skills like
+        DNS, DHCP, VLANs, Windows Server, Linux, virtualization, and troubleshooting. I also like writing clear lab reports
+        with steps, screenshots, and testing.
+      </p>
 
       <div class="cta">
-        <a class="btn primary" href="#academic">View Academic Projects</a>
+        <a class="btn primary" href="#academic">Academic Projects</a>
+        <a class="btn" href="#security">Security Labs</a>
         <a class="btn" href="#featured">Featured Media</a>
         <a class="btn" href="#contact">Email / LinkedIn</a>
-        <!-- Optional: upload resume.pdf to your repo root and enable this -->
-        <!-- <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a> -->
       </div>
     </header>
 
@@ -319,12 +299,12 @@
         </div>
 
         <div class="card">
-          <h3>Security Basics</h3>
+          <h3>Network Security Basics</h3>
           <p>Hardening, access control, patching, firewall basics, and safe lab practice.</p>
           <div class="chips">
             <span class="chip">Least privilege</span>
+            <span class="chip">Firewall rules</span>
             <span class="chip">Logging</span>
-            <span class="chip">Firewall basics</span>
           </div>
         </div>
 
@@ -338,6 +318,10 @@
           </div>
         </div>
       </div>
+
+      <p class="note">
+        Privacy note: I remove passwords, keys, and sensitive personal details from anything I publish online.
+      </p>
     </section>
 
     <section id="academic">
@@ -345,67 +329,110 @@
       <div class="grid">
 
         <div class="project">
-          <h3>Setting Up a SOHO Network</h3>
+          <h3>SOHO Network Lab</h3>
           <p>
-            Set up a SOHO LAN with a router and a Windows Server 2019 service.
-            Configured DNS and DHCP on a lab subnet (192.168.2XX.0/24) and deployed IIS on lab PCs.
-            Verified website access and A/PTR DNS lookups from a wired laptop.
+            Built a small SOHO lab network. Configured core services and verified connectivity with testing and documentation.
           </p>
           <div class="meta">
-            <span class="pill">Windows Server 2019</span>
             <span class="pill">DNS/DHCP</span>
-            <span class="pill">IIS</span>
+            <span class="pill">Windows Server</span>
+            <span class="pill">Troubleshooting</span>
           </div>
-          <a href="labs/IddeenJ_lab-3_Setting_Up_A_SOHO_Network.pdf" target="_blank" rel="noopener">Open lab report →</a>
+          <a href="labs/IddeenJ_lab-3_Setting_Up_A_SOHO_Network.pdf" target="_blank" rel="noopener">Open report (PDF) →</a>
         </div>
 
         <div class="project">
-          <h3>Proxmox Server</h3>
+          <h3>Proxmox Server Lab</h3>
           <p>
-            Built a Proxmox-based lab network and deployed three virtual machines.
-            Joined a Windows VM to a domain in the lab and verified end-to-end DNS, AD, and IIS worked correctly.
+            Built a Proxmox lab and deployed multiple VMs. Practiced virtualization, basic services, and validation tests.
           </p>
           <div class="meta">
             <span class="pill">Proxmox</span>
             <span class="pill">VMs</span>
-            <span class="pill">Domain join</span>
+            <span class="pill">Lab services</span>
           </div>
-          <a href="labs/IddeenJ_lab-4_Proxmox_Server.pdf" target="_blank" rel="noopener">Open lab report →</a>
+          <a href="labs/IddeenJ_lab-4_Proxmox_Server.pdf" target="_blank" rel="noopener">Open report (PDF) →</a>
         </div>
 
         <div class="project">
           <h3>Pi-hole Network Deployment</h3>
           <p>
-            Set up a Raspberry Pi 3 B+ as a DNS sinkhole using Pi-hole.
-            Used it to block ads and trackers and support local name resolution in the lab network.
+            Deployed Pi-hole in a lab network to learn DNS filtering and basic network hygiene.
           </p>
           <div class="meta">
-            <span class="pill">Raspberry Pi</span>
             <span class="pill">Pi-hole</span>
             <span class="pill">DNS</span>
+            <span class="pill">Network hygiene</span>
           </div>
-          <a href="labs/IddeenJ_lab-5_Pi-Hole_Network_deployment.pdf" target="_blank" rel="noopener">Open lab report →</a>
+          <a href="labs/IddeenJ_lab-5_Pi-Hole_Network_deployment.pdf" target="_blank" rel="noopener">Open report (PDF) →</a>
         </div>
 
         <div class="project">
           <h3>Private AI on LAN (Ollama + OpenWebUI)</h3>
           <p>
-            Set up a private AI chat stack on a LAN server using Ubuntu Server, Ollama, and OpenWebUI.
-            Secured it with a static IP, firewall rules, and authentication.
-            Verified it worked by pulling multiple models and comparing their responses.
+            Deployed a private AI service on a LAN server and practiced basic hardening and access controls.
           </p>
           <div class="meta">
-            <span class="pill">Ubuntu Server</span>
+            <span class="pill">Ubuntu</span>
             <span class="pill">Ollama</span>
-            <span class="pill">OpenWebUI</span>
+            <span class="pill">Access control</span>
           </div>
-          <a href="labs/IddeenJ_lab-6_Deploying_a_Private_AI_Model_with_Ollama_and_OpenWebUI.pdf" target="_blank" rel="noopener">Open lab report →</a>
+          <a href="labs/IddeenJ_lab-6_Deploying_a_Private_AI_Model_with_Ollama_and_OpenWebUI.pdf" target="_blank" rel="noopener">Open report (PDF) →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="security">
+      <h2>Security Labs</h2>
+      <div class="grid">
+
+        <div class="project">
+          <h3>pfSense Firewall Lab (NetGate)</h3>
+          <p>
+            Learned pfSense basics and installed a DNS and IP blocking tool to help control traffic.
+            Practiced firmware updates, package management, and blocking unwanted domains in a lab environment.
+          </p>
+          <div class="meta">
+            <span class="pill">pfSense</span>
+            <span class="pill">Firewall</span>
+            <span class="pill">Content blocking</span>
+          </div>
+          <a href="labs/Iddeen_lab-2_NetGate_pfSense.pdf" target="_blank" rel="noopener">Open report (PDF) →</a>
+        </div>
+
+        <div class="project">
+          <h3>Wireless Privacy Lab (WEP)</h3>
+          <p>
+            Demonstrated why WEP is insecure in a controlled class lab. The goal was learning: identify weak encryption
+            and explain safer alternatives like WPA2/WPA3.
+          </p>
+          <div class="meta">
+            <span class="pill">Wireless security</span>
+            <span class="pill">Encryption basics</span>
+            <span class="pill">Safe lab only</span>
+          </div>
+          <a href="labs/Iddeen_lab-5_Wired_Equivalent_Privacy.pdf" target="_blank" rel="noopener">Open report (PDF) →</a>
+        </div>
+
+        <div class="project">
+          <h3>Denial-of-Service Lab (DDoS Concepts)</h3>
+          <p>
+            Tested web server reliability under heavy request load in a controlled lab. Compared results and learned
+            basic defenses like timeouts, monitoring, and rate limiting.
+          </p>
+          <div class="meta">
+            <span class="pill">Availability</span>
+            <span class="pill">DoS concepts</span>
+            <span class="pill">Mitigation basics</span>
+          </div>
+          <a href="labs/Iddeen_lab-6_Denial_Of_Service.pdf" target="_blank" rel="noopener">Open report (PDF) →</a>
         </div>
 
       </div>
 
       <p class="note">
-        Safety note: IP addresses shown are from lab/private practice networks. I do not publish passwords, keys, or real sensitive details from personal or production systems.
+        These security labs were done for class and permission-based learning. I do not provide passwords, keys, or instructions to attack real systems.
       </p>
     </section>
 
@@ -417,7 +444,7 @@
           <h3>Scratch Team Blog: ASL Tutorial (Deaf Kids Code)</h3>
           <p>
             Featured in a Scratch Team Blog article about an American Sign Language tutorial in Scratch.
-            This project helps Deaf and hard of hearing learners access creative coding in ASL.
+            This supports Deaf and hard of hearing learners with accessible creative coding.
           </p>
           <div class="meta">
             <span class="pill">ASL</span>
@@ -432,9 +459,8 @@
         <div class="project">
           <h3>Made by Google: Live Transcribe on Pixel</h3>
           <p>
-            Featured in a video about Live Transcribe on Pixel. Live Transcribe turns speech into instant captions,
-            which helps Deaf people join everyday conversations (family dinner, ordering coffee, and more).
-            Google partnered with Gallaudet University and supported Deaf students and families through Deaf Kids Code.
+            Featured in a video about Live Transcribe on Pixel. Live Transcribe turns speech into instant captions
+            to support Deaf people in daily conversations and learning.
           </p>
           <div class="meta">
             <span class="pill">Accessibility</span>
@@ -447,12 +473,7 @@
         </div>
 
       </div>
-
-      <p class="note">
-        I like projects that support accessibility and help Deaf students learn tech and computer science.
-      </p>
     </section>
-
 
     <section id="contact">
       <h2>Contact</h2>
@@ -462,9 +483,6 @@
         <br/>
         LinkedIn:
         <a href="https://www.linkedin.com/in/jibreal-id-deen/" target="_blank" rel="noopener">linkedin.com/in/jibreal-id-deen</a>
-        <br/>
-        <!-- Optional: add your GitHub profile -->
-        <!-- GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">github.com/YOURUSERNAME</a> -->
       </p>
     </section>
 
