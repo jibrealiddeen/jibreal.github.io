@@ -21,6 +21,10 @@
     }
 
     *{ box-sizing:border-box; }
+
+    /* Smooth scrolling */
+    html{ scroll-behavior: smooth; }
+
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -70,6 +74,8 @@
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       box-shadow: 0 0 18px rgba(110,168,255,.6);
     }
+
+    /* NAV BUTTONS (match your screenshot style) */
     .links{
       display:flex;
       gap:12px;
@@ -77,17 +83,29 @@
       justify-content:flex-end;
       font-size: 14px;
     }
-    .links a{
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      color: var(--muted);
-    }
-    .links a:hover{
-      border-color: var(--border);
+    .navbtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(7,11,20,.25);
       color: var(--text);
       text-decoration:none;
-      background: rgba(15,27,52,.6);
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform .12s ease, filter .12s ease, background .12s ease, color .12s ease;
+    }
+    .navbtn:hover{
+      text-decoration:none;
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+    .navbtn.active{
+      border-color: transparent;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #06101F;
     }
 
     .hero{
@@ -141,13 +159,14 @@
       text-decoration:none;
       font-weight: 600;
       font-size: 14px;
+      transition: transform .12s ease, filter .12s ease;
     }
     .btn.primary{
       border-color: transparent;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       color: #06101F;
     }
-    .btn:hover{ text-decoration:none; filter: brightness(1.05); }
+    .btn:hover{ text-decoration:none; filter: brightness(1.05); transform: translateY(-1px); }
 
     section{
       margin-top: 18px;
@@ -157,6 +176,9 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
+
+      /* Fix sticky nav covering section titles */
+      scroll-margin-top: 92px;
     }
     section h2{
       margin: 0 0 12px;
@@ -247,12 +269,14 @@
         <span class="dot" aria-hidden="true"></span>
         <span>Portfolio</span>
       </div>
+
+      <!-- NAV: now uses .navbtn so it can highlight -->
       <div class="links">
-        <a href="#skills">Skills</a>
-        <a href="#academic">Academic Projects</a>
-        <a href="#security">Security Labs</a>
-        <a href="#featured">Featured Media</a>
-        <a href="#contact">Contact</a>
+        <a class="navbtn" href="#skills">Skills</a>
+        <a class="navbtn" href="#academic">Academic Projects</a>
+        <a class="navbtn" href="#security">Security Labs</a>
+        <a class="navbtn" href="#featured">Featured Media</a>
+        <a class="navbtn" href="#contact">Contact</a>
       </div>
     </div>
 
@@ -268,10 +292,10 @@
       </p>
 
       <div class="cta">
-        <a class="btn primary" href="#academic">Academic Projects</a>
-        <a class="btn" href="#security">Security Labs</a>
-        <a class="btn" href="#featured">Featured Media</a>
-        <a class="btn" href="#contact">Email / LinkedIn</a>
+        <a class="btn primary navbtn" href="#academic">Academic Projects</a>
+        <a class="btn navbtn" href="#security">Security Labs</a>
+        <a class="btn navbtn" href="#featured">Featured Media</a>
+        <a class="btn navbtn" href="#contact">Email / LinkedIn</a>
       </div>
     </header>
 
@@ -492,7 +516,52 @@
   </div>
 
   <script>
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ---- Smooth scroll + active highlight ("scroll spy") ----
+    const navBtns = document.querySelectorAll('a.navbtn');
+    const sectionIds = ["skills", "academic", "security", "featured", "contact"];
+    const sections = sectionIds
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    function setActiveById(id){
+      navBtns.forEach(btn => {
+        const href = btn.getAttribute("href");
+        btn.classList.toggle("active", href === "#" + id);
+      });
+    }
+
+    // Click: smooth scroll + activate
+    navBtns.forEach(btn => {
+      const href = btn.getAttribute("href") || "";
+      if (!href.startsWith("#")) return;
+
+      btn.addEventListener("click", (e) => {
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        setActiveById(target.id);
+      });
+    });
+
+    // Scroll: activate the section currently on screen
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visible) setActiveById(visible.target.id);
+    }, {
+      threshold: [0.2, 0.35, 0.5, 0.7]
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+
+    // Default active on load
+    setActiveById("skills");
   </script>
 </body>
 </html>
